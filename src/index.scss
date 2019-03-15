@@ -1,0 +1,68 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&subset=cyrillic');
+  @import url('https://fonts.googleapis.com/css?family=Caveat:400,700&subset=cyrillic');
+  
+  background-image: linear-gradient(to right top, #845ec2, #7658a5, #685189, #5a4b6d, #4b4453);
+  border-left: 30px solid #f9f871;
+  
+  margin: 0;
+  padding: 0;
+  
+  font-family: 'Montserrat';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 4em;
+    margin-inline-start: -0.06em;  
+  }
+
+  h2 {
+    font-size: 3em;
+    margin-bottom: 0.7em;
+  }
+
+  input {
+    border: none;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    border-bottom: 1px solid #F9F871;
+    padding-bottom: 2px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#main {
+  color: #FFF;
+}
+
+@media (max-width: 700px) {
+  body {
+    h1 {
+      font-size: 2em;
+    }
+    
+  }
+  
+}

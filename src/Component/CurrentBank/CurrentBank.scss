@@ -1,0 +1,43 @@
+.bankWrap {
+  margin-bottom: 4em;
+
+  .bankItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+  
+    .bankTitle {
+      margin-right: 0.5em;
+      font-weight: 500;
+    }
+  
+    .bankValue {
+      width: 20%;
+      input {
+        width: 80%;
+      }
+      &:after {
+        content: '₽';
+        margin-inline-start: 0.5em;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .bankWrap {
+    margin-top: 2em;
+
+    .bankItem {
+      flex-direction: column;
+      font-size: 1em;
+      margin-bottom: 2em;
+
+      .bankValue {
+        width: 100%;
+        margin-top: 0.5em;
+      }
+    }
+  }
+}

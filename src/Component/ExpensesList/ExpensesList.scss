@@ -1,0 +1,193 @@
+// .expensesItemsWrap {
+//   display: flex;
+//   flex-wrap: wrap;
+
+//   .expenseItem {
+//     width: calc((100% / 3) - 30px);
+//     margin-right: 30px;
+//     padding: 1em 1.5em;
+//     box-sizing: border-box;
+//     height: 160px;
+//     background: #F9F871;
+//     margin-bottom: 25px;
+//     display: flex;
+//     flex-direction: column;
+//     font-family: 'Caveat';
+//     color: #4B4453;
+//     font-size: 1.4em;
+//     box-shadow: 8px 10px 10px -9px #552b6ec7;
+//     cursor: pointer;
+//     position: relative;
+
+//     &:before {
+//       content: '';
+//       display: block;
+//       width: 80px;
+//       height: 20px;
+//       background: #ffffff80;
+//       position: absolute;
+//       top: 5px;
+//       left: -20px;
+//       transform: rotate(-35deg);
+//     }
+//     &:nth-child(2n) {
+//       top: -10px;
+//       transform: rotate(2deg);
+//     }
+    
+//     &:nth-child(3n) {
+//         bottom: -20px;
+//         transform: rotate(-5deg);
+//     }
+    
+//     &:nth-child(4n) {
+//         left: 5px;
+//         transform: rotate(2deg);
+//     }
+
+//     .expenseItemName {
+//       font-weight: bold;
+//     }
+//     .expenseItemValue {
+//       margin-top: 10px;
+//       font-size: 2.2em;
+//       &:after {
+//         content: '₽';
+//         display: inline-block;
+//         margin-inline-start: 5px;
+//         font-size: 0.8em;
+//       }
+//     }
+//   }
+// }
+
+
+.expensesItemsWrap {
+
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 3em;
+      margin-bottom: 0;
+    }
+
+    .addItemBtn {
+      width: 30%;
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 500;
+      border: 1px solid #FFF;
+    }
+  }
+
+  .expenseItem {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #FFF;
+    font-size: 1.5em;
+    line-height: 1;
+
+    input {
+      border: none;
+      font-weight: normal;
+    }
+
+    .expenseItemValue {
+      input {
+        text-align: right;
+      }
+    }
+
+    .expenseItemName {
+      input {
+        font-weight: 500;
+      }
+    }
+
+    &.itemAdd {
+      align-items: center;
+      
+      .expenseItemValue {
+        input {
+          text-align: right;
+        }
+        &:after {
+          display: none;
+        }
+      }
+
+      .expenseItemAddBtn {
+        cursor: pointer;
+        padding: 11px;
+        font-size: 0.8em;
+        transition: 1s;
+        background: #D65DB1;
+
+        &:hover {
+          background: #2C73D2;
+        }
+      }
+
+    }
+
+    .expenseItemName {
+      font-weight: 500;
+    }
+    
+    .expenseItemValue {
+      &:after {
+        content: '₽';
+        margin-inline-start: 0.5em;
+      }
+    }
+
+    &.header {
+      color: #F9F871;
+      * {
+          font-weight: bold;
+          cursor: default;
+      }
+      .expenseItemValue {
+        &:after {
+          display: none;
+        }
+      }
+
+    }
+  }
+  
+}
+
+
+@media (max-width: 700px) {
+  .expensesItemsWrap {
+    header {
+      flex-direction: column;
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      .addItemBtn {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 1em;
+      }
+    }
+
+    .expenseItem {
+      font-size: 1em;
+
+      .expenseItemValue {
+        text-align: right;
+      }
+    }
+  }
+}

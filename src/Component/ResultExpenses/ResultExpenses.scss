@@ -1,0 +1,12 @@
+.resultWrap {
+  margin-top: 5em;
+  > * {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #FFF;
+    font-size: 1.5em;
+    line-height: 1;
+  }
+}
